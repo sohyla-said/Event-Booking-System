@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <link rel="stylesheet" href="{% static 'css/register.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="csrf-token" content="{{ csrf_token }}">
+
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <form id="register-form">
+                <h1>Sign up</h1>
+                {% csrf_token %}
+                <div class="input-group">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" name="name" placeholder="Username" required>
+                </div>
+                <div class="input-group">
+                    <i class="fa-solid fa-inbox"></i>
+                    <input type="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="input-group">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" name="password" placeholder="Password" required>
+                </div>
+                <div class="input-group">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+                </div>
+                <div class="checkboxes">
+                    <label>
+                        <input type="checkbox" name="is_user" value="True"> I am a user
+                    </label>
+                    <label>
+                        <input type="checkbox" name="is_admin" value="False"> I am an admin
+                    </label>
+                </div>
+                <input type="submit" value="Register" class="register-button">
+                <p class="login-link">Already a member? <a href="{%url 'login_page'%}">Login <i class="fa-solid fa-right-to-bracket"></i></a></p>
+            </form>
+            <div id="register-msg"></div>
+        </div>
+    </div>
+    
+    
+
+    <script src="{% static 'JS/register.js' %}"></script>
+</body>
+</html>

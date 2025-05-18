@@ -1,0 +1,99 @@
+/* General styles */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f8f8f8;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Event container */
+#event-details {
+  max-width: 500px;
+  margin: 40px auto;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Event image */
+#event-image {
+  width: 50%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+/* Event heading */
+#event-name {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+/* Event details text */
+#event-details p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 10px 0;
+}
+
+/* Price */
+#event-price {
+  font-weight: bold;
+  color: #e67e22;
+}
+
+/* Booking status */
+#booking-status {
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Booking message */
+#booking-msg {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Book Now button */
+#book-btn {
+  display: block;
+  width: 30%;
+  padding: 14px;
+  margin-top: 20px;
+  font-size: 16px;
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: auto;
+}
+
+#book-btn:hover {
+  background-color: #27ae60;
+}
+
+/* Back link */
+a {
+  display: inline-block;
+  margin-top: 30px;
+  text-decoration: none;
+  color: #3498db;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+i{
+    margin-right: 5px;
+}
